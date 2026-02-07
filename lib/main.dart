@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'My Portfolio App',
       theme: ThemeData(
-        // सभी पेजों के लिए डिफ़ॉल्ट AppBar रंग 'sky blue'
+        // Default AppBar color for all pages is 'sky blue'
         appBarTheme: const AppBarTheme(
           color: Colors.lightBlue,
           titleTextStyle: TextStyle(
@@ -29,11 +29,11 @@ class MyApp extends StatelessWidget {
           ),
           iconTheme: IconThemeData(color: Colors.white),
         ),
-        // सामान्य टेक्स्ट रंग
+        // Normal text color
         textTheme: const TextTheme(
           bodyMedium: TextStyle(color: Color.fromARGB(255, 34, 34, 34)),
         ),
-        // मुख्य रंग योजना
+        // Main color scheme
         primarySwatch: Colors.lightBlue,
       ),
       initialRoute: '/home',

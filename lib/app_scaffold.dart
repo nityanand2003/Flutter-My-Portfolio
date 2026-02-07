@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-// सभी पेजों के लिए एक कॉमन Scaffold (ढांचा)
-// यह AppBar, Drawer, और BottomNavigationBar को हैंडल करता है।
+// A common scaffold for all pages
+// // It handles the AppBar, Drawer, and BottomNavigationBar.
 class AppScaffold extends StatelessWidget {
   final Widget body;
   final String title;
@@ -14,7 +14,7 @@ class AppScaffold extends StatelessWidget {
     required this.selectedIndex,
   });
 
-  // सभी पेजों के लिए नेविगेशन की सूची
+  // List of navigation for all pages
   static const List<Map<String, dynamic>> _navItems = [
     {'name': 'Home', 'route': '/home', 'icon': Icons.home},
     {'name': 'Education', 'route': '/education', 'icon': Icons.school},
@@ -28,11 +28,11 @@ class AppScaffold extends StatelessWidget {
     if (index != selectedIndex) {
       Navigator.pushReplacementNamed(context, _navItems[index]['route']);
     } else {
-      // अगर उसी पेज पर क्लिक किया, तो कुछ न करें या टॉप पर स्क्रॉल करें
+      // If clicked on the same page, do nothing or scroll to the top
     }
   }
 
-  // कस्टम Drawer जो आपकी आवश्यकताओं को पूरा करता है
+  // Custom Drawer that meets your needs
   Widget _buildDrawer(BuildContext context) {
     return Drawer(
       child: ListView(
@@ -68,7 +68,7 @@ class AppScaffold extends StatelessWidget {
                 ),
               ),
               onTap: () {
-                Navigator.pop(context); // Drawer बंद करें
+                Navigator.pop(context); // close drawer
                 _onItemTapped(context, index);
               },
             );
@@ -79,7 +79,7 @@ class AppScaffold extends StatelessWidget {
             title: const Text('About App'),
             onTap: () {
               Navigator.pop(context);
-              // About App Dialog दिखाएं
+              // Show the About App dialog
             },
           ),
         ],
@@ -87,10 +87,10 @@ class AppScaffold extends StatelessWidget {
     );
   }
 
-  // कस्टम BottomNavigationBar
+  // Custom BottomNavigationBar
   Widget _buildBottomNavBar(BuildContext context) {
     return BottomNavigationBar(
-      type: BottomNavigationBarType.fixed, // 6 items के लिए Fixed ज़रूरी है
+      type: BottomNavigationBarType.fixed, // Fixed is required for 6 items
       backgroundColor: Colors.lightBlue,
       selectedItemColor: Colors.white,
       unselectedItemColor: Colors.white70,
