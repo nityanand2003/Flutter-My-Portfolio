@@ -4,7 +4,7 @@ import 'app_scaffold.dart';
 class SkillsPage extends StatelessWidget {
   const SkillsPage({super.key});
 
-  // Resume से कौशल डेटा
+  // skills data
   static const List<String> technicalSkills = [
     'Flutter/Dart (Core)',
     'HTML, CSS, JavaScript',
@@ -27,7 +27,7 @@ class SkillsPage extends StatelessWidget {
     'English Typing (40 wpm)',
   ];
 
-  // कौशल सेक्शन कार्ड
+  // skill section card
   Widget _buildSkillSection(String title, List<String> skills, IconData icon, Color color) {
     return Card(
       elevation: 5,
@@ -73,7 +73,7 @@ class SkillsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppScaffold(
       title: 'Skills',
-      selectedIndex: 2, // Skills का इंडेक्स
+      selectedIndex: 2, // Index of Skills
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(15.0),
         child: Column(

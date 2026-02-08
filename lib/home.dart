@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
     {'name': 'More Info', 'route': '/home', 'icon': Icons.info, 'color': Colors.blueGrey}, // Home पर ही रखता हूँ
   ];
 
-  // Grid Card बनाने के लिए फंक्शन
+  // Function to create Grid Card
   Widget _buildGridCard(BuildContext context, Map<String, dynamic> item) {
     return Card(
       elevation: 4,
@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppScaffold(
       title: 'Home (Portfolio)',
-      selectedIndex: 0, // Home का इंडेक्स
+      selectedIndex: 0, // Index of Home
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -104,20 +104,20 @@ class HomePage extends StatelessWidget {
                   ),
                   const SizedBox(height: 10),
                   const Text(
-                    'यहाँ आप मेरे शैक्षिक योग्यता, कौशल, परियोजनाओं और इंटर्नशिप अनुभव के बारे में जान सकते हैं। मेरा उद्देश्य चुनौतीपूर्ण सॉफ्टवेयर डेवलपमेंट करियर में योगदान करना है।',
+                    "Here you can learn about my educational qualifications, skills, projects, and internship experience. I aim to contribute to a challenging software development career.",
                     style: TextStyle(fontSize: 16, height: 1.5),
                   ),
                   const SizedBox(height: 20),
 
                   // 6-Section Grid
                   GridView.builder(
-                    physics: const NeverScrollableScrollPhysics(), // Scrollable body के लिए आवश्यक
+                    physics: const NeverScrollableScrollPhysics(), // Required for scrollable body
                     shrinkWrap: true,
                     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2, // 2 कॉलम
+                      crossAxisCount: 2, // 2 Column
                       crossAxisSpacing: 10.0,
                       mainAxisSpacing: 10.0,
-                      childAspectRatio: 1.2, // कार्ड का Aspect Ratio
+                      childAspectRatio: 1.2, // Aspect Ratio of Card
                     ),
                     itemCount: _gridItems.length,
                     itemBuilder: (context, index) {

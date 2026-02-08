@@ -4,7 +4,7 @@ import 'app_scaffold.dart';
 class ExperiencePage extends StatelessWidget {
   const ExperiencePage({super.key});
 
-  // Resume से इंटर्नशिप डेटा
+  // internship data
   static const Map<String, dynamic> internshipData = {
     'role': 'Engineering Intern',
     'company': 'East Central Railway (Hajipur)',
@@ -18,7 +18,7 @@ class ExperiencePage extends StatelessWidget {
     ],
   };
 
-  // Resume से उपलब्धियां
+  // achievements
   static const List<String> achievements = [
     'Secured 1st prize in Fine Arts at the district level, twice (2019 and 2020).',
   ];
@@ -27,7 +27,7 @@ class ExperiencePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppScaffold(
       title: 'Experience & Achievements',
-      selectedIndex: 4, // Experience का इंडेक्स
+      selectedIndex: 4, // Index of Experience
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(15.0),
         child: Column(

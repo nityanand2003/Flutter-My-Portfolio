@@ -4,7 +4,7 @@ import 'app_scaffold.dart';
 class ProjectsPage extends StatelessWidget {
   const ProjectsPage({super.key});
 
-  // Resume से परियोजना डेटा
+  // project data
   static const List<Map<String, String>> projectsData = [
     {
       'title': 'Portfolio App',
@@ -36,8 +36,8 @@ class ProjectsPage extends StatelessWidget {
     },
   ];
 
-  // एकल प्रोजेक्ट कार्ड
-  // --- यहां BuildContext context जोड़ा गया है ---
+  // single project card
+  // --- Here the BuildContext context is added ---
   Widget _buildProjectCard(Map<String, String> data, BuildContext context) {
     return Card(
       elevation: 5,
@@ -75,8 +75,8 @@ class ProjectsPage extends StatelessWidget {
               alignment: Alignment.centerRight,
               child: TextButton.icon(
                 onPressed: () {
-                  // GitHub/Demo Link खोलने का लॉजिक यहाँ डालें
-                  // context अब उपलब्ध है
+                  // Insert logic to open GitHub/Demo Link here
+                  // context is now available
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(content: Text('${data['title']!} Link to be opened...')),
                   );
@@ -96,7 +96,7 @@ class ProjectsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppScaffold(
       title: 'Projects',
-      selectedIndex: 3, // Projects का इंडेक्स
+      selectedIndex: 3, // Index of Projects
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(15.0),
         child: Column(
@@ -107,7 +107,7 @@ class ProjectsPage extends StatelessWidget {
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.lightBlue),
             ),
             const Divider(height: 25, thickness: 2, color: Colors.lightBlueAccent),
-            // --- यहां context पास किया गया है ---
+            // --- Here context is passed ---
             ...projectsData.map((data) => _buildProjectCard(data, context)).toList(),
           ],
         ),

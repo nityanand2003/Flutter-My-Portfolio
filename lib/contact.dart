@@ -5,7 +5,7 @@ import 'app_scaffold.dart';
 class ContactPage extends StatelessWidget {
   const ContactPage({super.key});
 
-  // Resume से संपर्क जानकारी
+  // contact information
   static const Map<String, String> contactInfo = {
     'phone': '+91 7856876825',
     'email': '03nkumar01@gmail.com',
@@ -15,7 +15,7 @@ class ContactPage extends StatelessWidget {
     'location': 'Nawada, Bihar - 805110',
   };
 
-  // URL लॉन्च करने के लिए async फ़ंक्शन
+  // async function to launch URL
   Future<void> _launchUrl(String url) async {
     final uri = Uri.parse(url);
     if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
@@ -23,7 +23,7 @@ class ContactPage extends StatelessWidget {
     }
   }
 
-  // एकल संपर्क कार्ड
+  // single contact card
   Widget _buildContactTile(IconData icon, String title, String subtitle, String type) {
     String url = '';
     if (type == 'phone') {
@@ -55,7 +55,7 @@ class ContactPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppScaffold(
       title: 'Contact Me',
-      selectedIndex: 5, // Contact का इंडेक्स
+      selectedIndex: 5, // Index of Contact
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(15.0),
         child: Column(

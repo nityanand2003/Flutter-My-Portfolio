@@ -4,7 +4,7 @@ import 'app_scaffold.dart';
 class EducationPage extends StatelessWidget {
   const EducationPage({super.key});
 
-  // Resume से शिक्षा डेटा
+  // education data
   static const List<Map<String, String>> educationData = [
     {
       'course': 'B. Tech (CSE)',
@@ -26,7 +26,7 @@ class EducationPage extends StatelessWidget {
     },
   ];
 
-  // एकल शिक्षा कार्ड
+  // single education card
   Widget _buildEducationCard(Map<String, String> data) {
     return Card(
       elevation: 5,
@@ -77,7 +77,7 @@ class EducationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppScaffold(
       title: 'Education',
-      selectedIndex: 1, // Education का इंडेक्स
+      selectedIndex: 1, // Index of Education
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(15.0),
         child: Column(
