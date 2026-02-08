@@ -104,7 +104,7 @@ class HomePage extends StatelessWidget {
                   ),
                   const SizedBox(height: 10),
                   const Text(
-                    "Here you can learn about my educational qualifications, skills, projects, and internship experience. I aim to contribute to a challenging software development career.",
+                    "Here you can know about my educational qualifications, skills, projects, and internship experience. I aim to contribute to a challenging software development career.",
                     style: TextStyle(fontSize: 16, height: 1.5),
                   ),
                   const SizedBox(height: 20),
